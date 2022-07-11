@@ -21,19 +21,19 @@ save_dir="results"             #saved folder of training accuracy (type: string)
 #Assume 1V read voltage
 
 if implementation == "MLC":
-    cmd = "python3 main_inferen.py --load_model {0} --model {1} --w_bit {2} --a_bit {3} --comp {4} --sep {5} --finetune {6} --RH {7} --RL {8} --std {9} --Imax {10} --node {11} --cell {12} --save {13}"\
+    cmd = "python3 main_inference.py --load_model {0} --model {1} --w_bit {2} --a_bit {3} --comp {4} --sep {5} --finetune {6} --RH {7} --RL {8} --std {9} --Imax {10} --node {11} --cell {12} --save {13}"\
         .format(load_model,infe_model,wbit,abit,complementary,Separation,FT,RH,RL,std,Max_SA_current,node,unit_cell,save_dir)
 
     os.system(cmd)
 
 if implementation == "digital":
-    cmd = "python3 main_inferen_digi.py --load_model {0} --model {1} --w_bit {2} --a_bit {3} --comp {4} --sep {5} --finetune {6} --RH {7} --RL {8} --std {9} --Imax {10} --node {11} --cell {12} --save {13}"\
+    cmd = "python3 main_inference_digi.py --load_model {0} --model {1} --w_bit {2} --a_bit {3} --comp {4} --sep {5} --finetune {6} --RH {7} --RL {8} --std {9} --Imax {10} --node {11} --cell {12} --save {13}"\
         .format(load_model,infe_model,wbit,abit,complementary,Separation,FT,RH,RL,std,Max_SA_current,node,unit_cell,save_dir)
 
     os.system(cmd)
 
 if implementation == "analog":
-    cmd = "python3 main_inferen_ana.py --load_model {0} --model {1} --w_bit {2} --a_bit {3} --comp {4} --sep {5} --finetune {6} --RH {7} --RL {8} --std {9} --Imax {10} --node {11} --cell {12} --save {13}"\
+    cmd = "python3 main_inference_ana.py --load_model {0} --model {1} --w_bit {2} --a_bit {3} --comp {4} --sep {5} --finetune {6} --RH {7} --RL {8} --std {9} --Imax {10} --node {11} --cell {12} --save {13}"\
         .format(load_model,infe_model,wbit,abit,complementary,Separation,FT,RH,RL,std,Max_SA_current,node,unit_cell,save_dir)
 
     os.system(cmd)
